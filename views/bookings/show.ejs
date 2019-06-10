@@ -1,0 +1,8 @@
+<h2><%= booking.name %></h2>
+<h2><%= user.username %></h2>
+<button onclick="window.history.back();">Back</button>
+
+<a href="/bookings/<%= booking.id %>/edit">Edit</a>
+<form method="POST" action="`/bookings/${booking.id}`?_method=DELETE">
+    <button type="submit">Delete</button>
+</form>

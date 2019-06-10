@@ -1,0 +1,11 @@
+<%- include("../layout/layout.ejs")%>
+<h1>Edit Bookings</h1>
+<form action="/bookings/<%= booking.id %>?_method=PUT"
+      method="POST">
+    <%- include("form")%>
+    <a href="/bookings/<%= booking.id %> ">Cancel</a>
+    <button type="submit">Submit</button>
+</form>
+
+
+

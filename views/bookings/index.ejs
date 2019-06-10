@@ -1,0 +1,15 @@
+<%- include("../part/error.ejs") %>
+
+
+
+<br>
+<% booking.forEach( booking => {%>
+<div><%= booking.name %></div>
+
+<a href="/bookings/<%= booking.id %>"> View </a>
+    <br>
+<a href="/bookings/<%= booking.id %>/edit"> Edit </a>
+    <form method="POST" action="/bookings/<%= booking.id %>?_method=DELETE">
+<button type="submit">Delete</button>
+    </form>
+<% })%>
